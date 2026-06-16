@@ -344,8 +344,8 @@ const PERSONAGGI = {
     scene: [
       { piano:0, eyebrow:"Nodo 1 – L’ingresso", testo:"Le porte si stanno chiudendo. Lui allunga il braccio e le trattiene per te. La corsa, tecnicamente, è già cominciata.", battuta:"«Oh, buongiorno! Anche tu in extremis, eh. Si vede che è lunedì.»" },
       { piano:2, eyebrow:"Nodo 2 – La domanda-fotocopia", testo:"Secondo piano. Ti guarda con l’aria di chi ha deciso di fare conversazione e non intende tornare indietro.", battuta:"«Allora, com’è andato il weekend? Fatto qualcosa di bello?»" },
-      { piano:3, eyebrow:"Nodo 3 – Il sobbalzo", testo:"L’ascensore sobbalza. Un rumore metallico, breve ma sincero. La luce trema un istante.", battuta:"«Uh. L’hai sentito anche tu o sto invecchiando male?»" },
-      { piano:5, eyebrow:"Nodo 4 – La trappola del gossip", testo:"Quinto piano. Abbassa la voce, si avvicina di mezzo passo. La cabina è diventata una sala riunioni riservata.", battuta:"«Senti, ma da voi che aria tira? Perché da noi gira voce che a settembre tagliano. Tu hai sentito qualcosa?»" },
+      { piano:3, eyebrow:"Nodo 3 – La voglia di gossip", testo:"Terzo piano. Si illumina, abbassa appena la voce: ha una notizia e non vede l’ora di liberarsene.", battuta:"«Ma hai saputo di Marchetti e Giorgi? Io lo sospettavo eh!»" },
+      { piano:5, eyebrow:"Nodo 4 – Il pessimismo", testo:"Quinto piano. Si avvicina di mezzo passo. La cabina è diventata una sala riunioni riservata.", battuta:"«Senti, ma da voi che aria tira? Perché da noi gira voce che a settembre tagliano. Tu hai sentito qualcosa?»" },
       { piano:6, eyebrow:"Nodo 5 – L’intimità non richiesta", testo:"Sesto piano. Cambia tono. Adesso è sincero, il che è molto peggio.", battuta:"«Comunque te lo volevo dire da un po’: tu sei una persona che ascolta. Si vede. Di questi tempi non è poco.»" },
       { piano:8, eyebrow:"Nodo 6 – L’uscita", testo:"Ding. Ottavo piano. Le porte si aprono. La scena va chiusa in tre secondi, non di più.", battuta:"«Vabbè… alla prossima. Magari un caffè, prima o poi? Dico sul serio, eh.»" }
     ]
@@ -355,20 +355,35 @@ const PERSONAGGI = {
     nome: "La vicina di casa petulante",
     cardDescrizione: "Sa tutto del palazzo. Adesso vuole sapere tutto di te. Hai otto piani per impedirlo.",
     chi: "La vicina",
-    contesto: "Una vicina di casa anziana e petulante, in un condominio. Maestra della domanda indiscreta travestita da cortesia: gossip condominiale, sensi di colpa, deleghe non richieste, riferimenti alla famiglia del giocatore. Il giocatore la incrocerà per i prossimi vent'anni: non può bruciare il rapporto, ma nemmeno farsi arruolare.",
+    contesto: "Una vicina di casa anziana e petulante, in un condominio. Maestra della domanda indiscreta travestita da cortesia: gossip condominiale, sensi di colpa, deleghe non richieste, riferimenti alla vita privata del giocatore. Il giocatore la incrocerà per i prossimi vent'anni: non può bruciare il rapporto, ma nemmeno farsi arruolare.",
     scene: [
       { piano:0, eyebrow:"Nodo 1 – L’aggancio", testo:"Entra con due buste della spesa e l’energia di chi ha già deciso come andrà questa conversazione.", battuta:"«Ah, meno male! Mi tenga l’ascensore. Lei sale, vero? Tanto lei sale sempre.»" },
       { piano:2, eyebrow:"Nodo 2 – Il gossip d’apertura", testo:"Secondo piano. Si sporge appena verso di te, con la voce di chi sta per dire una cosa che non dovrebbe.", battuta:"«Ha sentito anche lei, stanotte? Quelli del quarto. Io non dico niente, per carità. Però.»" },
-      { piano:3, eyebrow:"Nodo 3 – L’interrogatorio civico", testo:"Terzo piano. Ti squadra. Hai la netta sensazione di essere diventata un sospettato.", battuta:"«Le posso chiedere una cosa? Lei la differenziata la fa, vero? Perché qualcuno nel palazzo non la fa. E io i miei sospetti ce li ho.»" },
+      { piano:3, eyebrow:"Nodo 3 – L’interrogatorio civico", testo:"Terzo piano. Ti squadra. Hai la netta sensazione di essere diventata un sospettato.", battuta:"«Le posso chiedere una cosa? Lei la differenziata la fa, vero? Perché qualcuno nel palazzo non la fa. Poi paghiamo tutti eh!»" },
       { piano:5, eyebrow:"Nodo 4 – La delega", testo:"Quinto piano. Sospira teatralmente, guardando il soffitto come a chiamare un testimone.", battuta:"«L’amministratore tanto non risponde più nemmeno al telefono. Senta, lei che è giovane e sa usare il computer: perché non gli scrive lei due righe?»" },
-      { piano:6, eyebrow:"Nodo 5 – Il colpo basso", testo:"Sesto piano. Addolcisce la voce. È il momento degli affetti, che nel suo repertorio è l’arma finale.", battuta:"«E sua madre come sta? Me la saluti tanto, eh. Pensare che era una donna così in gamba.»" },
-      { piano:8, eyebrow:"Nodo 6 – L’arruolamento", testo:"Ding. Ottavo piano. Raccoglie le buste, ma non ha finito: l’ultima mossa la gioca sempre sulla soglia.", battuta:"«Vabbè, la lascio andare. Ah, senta: mercoledì c’è l’assemblea di condominio. Lei viene, vero? Io conto su di lei.»" }
+      { piano:6, eyebrow:"Nodo 5 – Il colpo basso", testo:"Sesto piano. Addolcisce la voce, ma gli occhi restano quelli di chi sta facendo i conti.", battuta:"«Ma non paga più l’acqua per due persone, vero? Adesso è single? Che peccato, mi spiace. Brutta batosta, eh?»" },
+      { piano:8, eyebrow:"Nodo 6 – L’arruolamento", testo:"Ding. Ottavo piano. Raccoglie le buste, ma non ha finito: l’ultima mossa la gioca sempre sulla soglia.", battuta:"«Vabbè, la lascio andare. Ah, senta: mercoledì c’è l’assemblea di condominio. Lei viene, vero? Dobbiamo votare per i posti auto!»" }
+    ]
+  },
+  zio: {
+    tasto: "3",
+    nome: "Il vecchio zio insopportabile",
+    cardDescrizione: "Cena di famiglia. Salite insieme. Lui ha opinioni su tutto, soprattutto su di te.",
+    chi: "Lo zio",
+    contesto: "Il vecchio zio insopportabile, mentre giocatore e zio salgono in ascensore verso una cena di famiglia. Repertorio completo: paragoni con i cugini sistemati, domande sulla vita sentimentale, teorie lette su internet o sentite in tv, opinioni politiche divergenti, generosità paternalistica non richiesta. Il giocatore deve arrivare alla cena senza esplodere, perché poi c'è la cena.",
+    scene: [
+      { piano:0, eyebrow:"Nodo 1 – L’adunata", testo:"Te lo ritrovi nell’androne. Ti vede, allarga le braccia, occupa metà ascensore con la giacca buona delle occasioni.", battuta:"«Ohé, guarda chi c’è! Sali sali, che ’sto coso ci mette una vita. Adesso è tutto elettronico. Anche le auto, eh. Si rompono subito per quello.»" },
+      { piano:2, eyebrow:"Nodo 2 – Il confronto", testo:"Secondo piano. Parte senza preavviso, come tutte le sue domande migliori.", battuta:"«Allora, il lavoro? Perché tua cugina ha appena vinto il concorso, eh. Sistemata, lei. Tu invece fai ancora quella cosa col computer?»" },
+      { piano:3, eyebrow:"Nodo 3 – L’anagrafe sentimentale", testo:"Terzo piano. Ti guarda con compassione preventiva, che è la peggiore delle compassioni.", battuta:"«E per il resto? Io alla tua età avevo già due figli e un mutuo. E il mutuo era quello che dava meno pensieri.»" },
+      { piano:5, eyebrow:"Nodo 4 – La teoria", testo:"Quinto piano. Alza l’indice. Sta per dispensare una verità definitiva sulla tua generazione.", battuta:"«Certo che siete cresciuti male voi. Viziati. Non vi impegnate. Ho letto che i giovani vogliono solo lavorare in smart o come si dice. È l’unica cosa a cui pensano.»" },
+      { piano:6, eyebrow:"Nodo 5 – La generosità paternalistica", testo:"Sesto piano. Si avvicina, abbassa la voce, ti mette una mano sulla spalla. Sta per esserti generoso nel modo più offensivo possibile.", battuta:"«Senti, se hai bisogno di soldi, dimmelo eh. Io e te abbiamo le idee un po’ diverse ma si vede che hai bisogno di aiuto.»" },
+      { piano:8, eyebrow:"Nodo 6 – La soglia", testo:"Ding. Ottavo piano. Dalla porta del pianerottolo arriva odore di arrosto e voci di parenti. Lui ti fa strada e si gira un’ultima volta.", battuta:"«Vai vai, entra prima tu. E mi raccomando: stasera sorridi, che hai sempre quella faccia.»" }
     ]
   },
   crush: {
-    tasto: "3",
-    nome: "La persona di cui sei segretamente innamorata",
-    cardDescrizione: "Otto piani da solə con lei. Il cuore a 140. Statisticamente, andrà malissimo.",
+    tasto: "4",
+    nome: "La persona che ami segretamente",
+    cardDescrizione: "Otto piani con lei. Il cuore a mille. Statisticamente, andrà malissimo.",
     chi: "Lei/Lui",
     contesto: "La persona di cui il giocatore è segretamente innamorato, incontrata per caso in ascensore. È brillante, disinvolta, e – crudelmente – gentile. Fa domande che sembrano aperture ma forse sono solo cortesia, e il giocatore deve navigare tra il dire troppo e il non dire niente, con il cuore a 140 battiti. Ogni battuta del giocatore pesa il triplo.",
     scene: [
@@ -378,21 +393,6 @@ const PERSONAGGI = {
       { piano:5, eyebrow:"Nodo 4 – La domanda", testo:"Quinto piano. Lo chiede con leggerezza, guardando i numeri dei piani. Tu smetti di respirare con discrezione.", battuta:"«Ma tu alla fine stai ancora con… com’è che si chiamava?»" },
       { piano:6, eyebrow:"Nodo 5 – Il complimento ambiguo", testo:"Sesto piano. Si volta e ti guarda davvero, per la prima volta da quando è entrata.", battuta:"«Hai qualcosa di diverso oggi. In senso buono, eh.»" },
       { piano:8, eyebrow:"Nodo 6 – La finestra", testo:"Ding. Ottavo piano. Le porte si aprono. Lei esita mezzo secondo sulla soglia. Mezzo secondo è tantissimo.", battuta:"«Io vado di là. Però dai – non facciamo passare un altro secolo, ok?»" }
-    ]
-  },
-  zio: {
-    tasto: "4",
-    nome: "Il vecchio zio insopportabile",
-    cardDescrizione: "Cena di famiglia. Salite insieme. Lui ha opinioni su tutto, soprattutto su di te.",
-    chi: "Lo zio",
-    contesto: "Il vecchio zio insopportabile, mentre giocatore e zio salgono in ascensore verso una cena di famiglia. Repertorio completo: paragoni con i cugini sistemati, domande sulla vita sentimentale, teorie lette su internet o sentite in tv, complicità non richieste sui segreti di famiglia. Il giocatore deve arrivare alla cena senza esplodere, perché poi c'è la cena.",
-    scene: [
-      { piano:0, eyebrow:"Nodo 1 – L’adunata", testo:"Te lo ritrovi nell’androne. Ti vede, allarga le braccia, occupa metà ascensore con la giacca buona delle occasioni.", battuta:"«Ohé, guarda chi c’è! Sali sali, che ’sto coso ci mette una vita. Ai miei tempi si faceva prima a piedi, e infatti si stava meglio.»" },
-      { piano:2, eyebrow:"Nodo 2 – Il confronto", testo:"Secondo piano. Parte senza preavviso, come tutte le sue domande migliori.", battuta:"«Allora, il lavoro? Perché tua cugina ha appena vinto il concorso, eh. Sistemata, lei. Tu invece fai ancora quella cosa col computer?»" },
-      { piano:3, eyebrow:"Nodo 3 – L’anagrafe sentimentale", testo:"Terzo piano. Ti guarda con compassione preventiva, che è la peggiore delle compassioni.", battuta:"«E sul fronte fidanzati? Niente? Mah. Io alla tua età avevo già due figli e un mutuo. E il mutuo era quello che dava meno pensieri.»" },
-      { piano:5, eyebrow:"Nodo 4 – La teoria", testo:"Quinto piano. Alza l’indice. Sta per citare una fonte autorevole, cioè la televisione.", battuta:"«Lo sai che ho letto che voi giovani non comprate casa perché spendete tutto in colazioni? L’ha detto uno bravo, uno che va in tv.»" },
-      { piano:6, eyebrow:"Nodo 5 – Il patto segreto", testo:"Sesto piano. Si avvicina, abbassa la voce, ti mette una mano sulla spalla. Sei appena diventata complice di qualcosa.", battuta:"«Senti, mi raccomando: a tavola non nominare la macchina nuova davanti a tua zia, che è un discorso lungo. Anzi lunghissimo.»" },
-      { piano:8, eyebrow:"Nodo 6 – La soglia", testo:"Ding. Ottavo piano. Dalla porta del pianerottolo arriva odore di arrosto e voci di parenti. Lui ti fa strada e si gira un’ultima volta.", battuta:"«Vai vai, entra prima tu. E mi raccomando: stasera sorridi, che hai sempre quella faccia.»" }
     ]
   }
 };
