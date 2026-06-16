@@ -264,6 +264,10 @@
   <div class="indicatore">
     <span class="marchio">OraBuca · Palestra sociale</span>
     <div style="display:flex;align-items:center;gap:10px;">
+      <button id="btnIndietro" aria-label="Cambia scenario" title="Cambia scenario"
+        style="display:none;background:var(--pannello);border:1px solid var(--pannello-2);color:var(--acciaio);
+        border-radius:6px;height:34px;padding:0 12px;cursor:pointer;font-family:'DM Mono',monospace;
+        font-size:11px;letter-spacing:.08em;text-transform:uppercase;">↩ Scenario</button>
       <button id="btnAudio" aria-label="Attiva o disattiva l’audio" title="Audio"
         style="background:var(--pannello);border:1px solid var(--pannello-2);color:var(--led);
         border-radius:6px;width:34px;height:34px;cursor:pointer;font-size:15px;line-height:1;">🔊</button>
@@ -542,6 +546,24 @@ $("btnAudio").addEventListener("click", () => {
   if(audioAttivo) initAudio();
 });
 
+/* ---- Torna alla scelta dello scenario ---- */
+function tornaAllaScelta(){
+  personaggio = null;
+  nodoCorrente = 0;
+  punteggi = { controllo: 0, conformismo: 0 };
+  storico = [];
+  $("contenitoreScene").innerHTML = "";
+  $("erroreMsg").classList.remove("visibile");
+  $("esito").classList.remove("visibile");
+  $("pagellaTesto").textContent = "…";
+  aggiornaPiano(0);
+  $("gioco").classList.add("nascosto");
+  $("btnIndietro").style.display = "none";
+  $("scelta").classList.remove("nascosto");
+  window.scrollTo({top:0, behavior: motionOk ? "smooth" : "auto"});
+}
+$("btnIndietro").addEventListener("click", tornaAllaScelta);
+
 /* ---- Flusso iniziale ---- */
 $("btnInizia").addEventListener("click", () => {
   initAudio();
@@ -566,6 +588,7 @@ function avviaPartita(chiave){
   personaggio = PERSONAGGI[chiave];
   $("scelta").classList.add("nascosto");
   $("gioco").classList.remove("nascosto");
+  $("btnIndietro").style.display = "inline-flex";
   mostraNodo(0);
 }
 
@@ -747,6 +770,7 @@ async function mostraEsito(){
   requestAnimationFrame(() => attivaBarre(mf, [punteggi.controllo, punteggi.conformismo], MAX_PER_ASSE));
 
   $("esito").classList.add("visibile");
+  $("btnIndietro").style.display = "none";
   $("esito").scrollIntoView({behavior: motionOk ? "smooth" : "auto", block:"start"});
 
   try{
@@ -810,19 +834,7 @@ $("btnCondividi").addEventListener("click", async () => {
   }
 });
 
-$("btnRiprova").addEventListener("click", () => {
-  personaggio = null;
-  nodoCorrente = 0;
-  punteggi = { controllo: 0, conformismo: 0 };
-  storico = [];
-  $("contenitoreScene").innerHTML = "";
-  $("esito").classList.remove("visibile");
-  $("pagellaTesto").textContent = "…";
-  aggiornaPiano(0);
-  $("gioco").classList.add("nascosto");
-  $("scelta").classList.remove("nascosto");
-  window.scrollTo({top:0, behavior: motionOk ? "smooth" : "auto"});
-});
+$("btnRiprova").addEventListener("click", tornaAllaScelta);
 </script>
 </body>
 </html>
